@@ -1,0 +1,113 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Отчет о визуализации эмбеддингов</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+            .container { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+            .header { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 10px; color: white; text-align: center; }
+            .stats { display: flex; justify-content: space-around; margin: 20px 0; flex-wrap: wrap; }
+            .stat-box { 
+                background: linear-gradient(135deg, #e8f4f8 0%, #d1ecf1 100%); 
+                padding: 15px; 
+                border-radius: 8px; 
+                text-align: center; 
+                min-width: 120px;
+                margin: 5px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            .links { margin-top: 30px; }
+            .link-button { 
+                display: inline-block; 
+                padding: 12px 24px; 
+                margin: 10px; 
+                background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%); 
+                color: white; 
+                text-decoration: none; 
+                border-radius: 8px; 
+                transition: transform 0.2s;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            .link-button:hover { transform: translateY(-2px); }
+            .description { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
+            .instructions { background: #e8f5e8; padding: 20px; border-radius: 8px; margin: 20px 0; }
+            .server-info { 
+                background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%); 
+                padding: 15px; 
+                border-radius: 8px; 
+                margin: 20px 0; 
+                text-align: center;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>📊 Отчет о визуализации эмбеддингов</h1>
+                <p>Интерактивная 3D визуализация тональности текстовых комментариев</p>
+            </div>
+            
+            <div class="server-info">
+                🌐 Веб-сервер запущен! Все файлы доступны по адресу: <strong>http://localhost:8000</strong>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>Всего точек</h3>
+                    <h2>3000</h2>
+                </div>
+                <div class="stat-box">
+                    <h3>Позитивные</h3>
+                    <h2 style="color: #2E8B57;">1920</h2>
+                </div>
+                <div class="stat-box">
+                    <h3>Негативные</h3>
+                    <h2 style="color: #DC143C;">343</h2>
+                </div>
+                <div class="stat-box">
+                    <h3>Нейтральные</h3>
+                    <h2 style="color: #4169E1;">737</h2>
+                </div>
+            </div>
+            
+            <div class="description">
+                <h2>🎯 Описание визуализации</h2>
+                <ul>
+                    <li><strong>3D t-SNE:</strong> Трехмерное представление высокоразмерных эмбеддингов</li>
+                    <li><strong>Цветовое кодирование:</strong> Зеленый - позитивные, красный - негативные, синий - нейтральные</li>
+                    <li><strong>Интерактивность:</strong> Наведите курсор на точку для просмотра комментария</li>
+                    <li><strong>Кластеризация:</strong> Близкие точки имеют схожую семантику</li>
+                </ul>
+            </div>
+            
+            <div class="links">
+                <h2>🔗 Ссылки на визуализации</h2>
+                <a href="embeddings_3d_visualization.html" class="link-button" target="_blank">🎮 3D Интерактивная визуализация</a>
+                <a href="embeddings_2d_projections.html" class="link-button" target="_blank">📈 2D Проекции</a>
+                <a href="sentiment_distribution.png" class="link-button" target="_blank">📊 Распределение тональности</a>
+                <a href="confusion_matrix.png" class="link-button" target="_blank">🎯 Матрица ошибок</a>
+            </div>
+            
+            <div class="instructions">
+                <h2>📋 Инструкция по использованию</h2>
+                <ol>
+                    <li>Откройте <strong>3D Интерактивную визуализацию</strong> для основного анализа</li>
+                    <li>Используйте мышь для поворота, масштабирования и перемещения по 3D пространству</li>
+                    <li>Наводите курсор на точки для просмотра содержимого комментариев</li>
+                    <li>Используйте легенду для скрытия/показа различных классов</li>
+                    <li>Анализируйте кластеры: близкие точки имеют схожую семантику</li>
+                    <li><strong>Веб-сервер будет работать до завершения программы</strong></li>
+                </ol>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px; color: #666;">
+                <p>💡 <em>Для остановки сервера нажмите Ctrl+C в терминале</em></p>
+            </div>
+        </div>
+    </body>
+    </html>
+    
